@@ -34,5 +34,5 @@ function onKeyDownHandle(e) {
 
 function init(){
   var x = document.querySelector("body")
-  x.addEventListener("keydown", )
+  x.addEventListener("keydown", onKeyDownHandle)
 }
