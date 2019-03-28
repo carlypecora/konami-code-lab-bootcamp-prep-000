@@ -12,21 +12,27 @@ const codes = [
   "a"
 ]
 
-function init() {
-  const secretCode = codes.join()
-  const secretCodeLength = secretCode.length;
-  
-  let enteredCode = [];
-  
-  window.addEventListener('keydown', (e) => {
-    enteredCode.push(e.key);
+ 
 
-    enteredCode.splice(-secretCodeLength -1, enteredCode.length - secretCodeLength);
+let index = 0;
 
-    if(enteredCode.join().includes(secretCode) === true){
-        alert('Congratulations')
+function onKeyDownHandle(e) {
+  const key = e.key;
+ 
+  if (key === codes[index]) {
+    index++;
+ 
+    if (index === codes.length) {
+      alert("Congratulations!");
+ 
+      index = 0;
     }
-  });
+  } else {
+    index = 0;
+  }
 }
 
-init();
+function init(){
+  var x = document.querySelector("body")
+  x.addEventListener("keydown", )
+}
